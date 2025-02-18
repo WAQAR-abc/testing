@@ -1,0 +1,18 @@
+name: My First Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - run: ls
+
+      - name: printing message
+        run: echo "Hello World!"
+
